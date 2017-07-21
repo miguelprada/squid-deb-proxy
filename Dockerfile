@@ -13,6 +13,7 @@ RUN apt-get update && \
     ln -sf /dev/stdout /var/log/squid-deb-proxy/store.log &&\
     ln -sf /dev/stdout /var/log/squid-deb-proxy/cache.log
 
+COPY mirror-dstdomain.acl /etc/squid-deb-proxy/mirror-dstdomain.acl
 COPY extra-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/20-extra-sources.acl
 COPY start.sh /start.sh
 
